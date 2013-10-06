@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    
+    {%  load staticfiles %}
+    
+    <title>GovernMaid</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <!--My styles-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+	<!--Importing JQuery and JQuery UI Google CDN -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>	
+	<!-- Bootstrap CDN -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" media="screen">
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	
+	{% block headers %}
+
+	{% endblock %}
+	
+  	</head>
+  	
+  	<body>
+	{% block body %}
+
+	{% endblock %}
+      <div class="footer">
+       <ul class="inline"><li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</li><li>About</li><li>Mission</li><li class="contactus">Contact Us</ul>
+      </div>
+  	</body>
+</html>
