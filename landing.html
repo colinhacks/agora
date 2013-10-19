@@ -1,0 +1,167 @@
+{% extends 'template.html' %}
+{% block head %}
+
+    <meta charset="utf-8">
+    <title>Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  {% endblock %}
+
+  {% block body %}
+  {% include "navbar_login.html" %}
+
+      <div class="jumbotron">
+       <div id="main-page" >
+          <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+      </ol><!-- class of slide for animation -->
+  
+
+    <div class="item active"><!-- class of active since it's the first item -->
+      <img src="http://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Skyline_Panorama_Dusk.jpg" alt="" />
+      <div class="Boston">
+      </div>
+    </div>
+
+       </div>
+        <h1><center>Welcome to Agora!</center></h1>   
+       <center>
+        
+        <br>
+        <br>
+         <!-- Get the city Source -->
+        <a href="#" class="btn btn-primary btn-large">Get Started<br></a>
+       
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+
+
+<div id ="anchor">
+  <div class="row">
+      {% load staticfiles %}
+  <div class="span5 offset1"><img class="img-circle" src="{% static 'img/microphone.jpg' %}" alt="Town Hall Meeting" width="100%" height="100%" style="display: block; margin-left:auto; margin-right:auto;"/></div>
+  <div class="span5 offset1"><br><br><br><span style="font-size:x-large;"><strong>Despite the ubiquity of the Internet in modern life, citizens continue to communicate with their local governments in much the same way as they did fifty years ago. Agora seeks to fundamentally change the way that citizens communicate with their local governments.</strong></span></div>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="span5 offset1"><br><br><br><span style="font-size:x-large;"><strong>The agora, literally "gathering place," was the center of political life in Ancient Greek city-states. Building on that idea, Agora is an online discussion space that allows citizens of the local community to suggest ideas, collaborate on community projects, and reach out to their local government.</div>
+  <div class="span5 offset1"><img class="img-circle" src="{% static 'img/raphael_school_of_athens.jpg' %}" alt="Construction Workers" width="100%" height="100%" style="margin-top:30px;display: block; padding-left:25px;margin-left:auto; margin-right:auto;"/></div></strong></span>
+</div>
+       <br>
+       <br>
+<div class="row">
+  <div class="span5 offset1"><img class="img-circle" src="{% static 'img/key.jpeg' %}" alt="Construction Workers" width="100%" height="100%" style="margin-top:20px;display: block; margin-left:auto; margin-right:auto;"/></div>
+  <div class="span5 offset1"><br><br><br><br><br><br><span style="font-size:x-large;"><strong>Agora seeks to build better and stronger communities by further enabling democracy in the Internet Age. Join us.</div></strong></span>
+</div>
+       </div>
+
+
+
+
+       <br>
+       <br>
+       <br>
+       <br>
+       <div class="row-fluid">
+        <div class="span6 offset3">
+          <a href="#" class="btn btn-primary btn-large btn-block">Sign Up!
+          </a>
+        </div><div class="span3">&nbsp;</div>
+       </div>
+</center>
+     <div style="margin-left:100px;" class="navbar navbar-fixed-bottom" align="right"> <p class="muted credit">GovernAid</p></div>
+
+    </div> <!-- /container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script>$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});</script>
+    
+
+  {% endblock %}
