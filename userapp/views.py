@@ -1,3 +1,3 @@
 def register(request, *args, **kwargs):
-	return render(request, kwargs['template'],{'extension':'logout.html'})# Create your views here.
+	return render(request, 'register.html',{'extension':'template.html'})# Create your views here.
 	

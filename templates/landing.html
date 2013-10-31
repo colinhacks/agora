@@ -8,9 +8,14 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--Unused CSS -->
+    body {
         padding-top: 20px;
         padding-bottom: 40px;
       }
@@ -38,43 +43,132 @@
         padding: 14px 24px;
       }
 
-    </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
   {% endblock %}
 
   
   {% block body %}
-  {% include "navbar_login.html" %}
+  <style type="text/css" media="all">
+    <!--
+    
+    .welcome {
+        font-weight:bold;
+        font-family:serif;
+        padding-top:20px;
+        padding-left:20px;
+        position:absolute;
+        top:60px;
+        left:20px;
+        width:auto;
+        margin-top:0px;
+        font-variant:small-caps;
+        color:white;
+        font-size:50px !important;
+        text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+        
+    }
+    .jumbo {
+      width:100%;
+      box-shadow: 5 5 5 5 black;
+    }
+    .navbar {
+      margin-bottom: 0px !important;
+    }
+    .dramatic {
+      background:black;
+      margin-top:0px;
+      color:white;
+      text-align:center;
+      padding-bottom:15px;
+      border-bottom: 2px solid white;
+
+    }
+    .sogood {
+      margin-top:0px;
+      margin-bottom:0px;
+      padding-top:23px;
+      padding-bottom:23px;
+      text-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
+    }
+    .skyline {
+      box-shadow: 0px 5px 5px white;
+      border-bottom:2px solid white;
+    }
+    .impact{
+      margin-right:auto;
+      margin-left:auto;
+    }
+
+-->
   {% load staticfiles %}
+    </style>
 
-  <div class="hidden-desktop" style="font-size:150%;width:100%;">
-    <h1><center>Welcome to Agora!</center></h1>
+    <script type="text/javascript">
+    $(function(){
+      $("body").css("background-image","url('{% static 'img/blueprint.jpg' %}');");
+    });
+    </script>
+  {% include "navbar_login.html" %}
+
+
+  <div class="jumbo skyline"><!-- class of active since it's the first item -->
+    <img src="http://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Skyline_Panorama_Dusk.jpg" alt="Boston" />
   </div>
 
-  <div class="visible-desktop" style="font-size:150%;width:100%;margin-top:45px;">
-    <h1><center>Welcome to Agora!</center></h1>
+  <div class="welcome">
+    <center>Welcome to Agora!</center>
   </div>
 
-  <div class="jumbotron" style="width:100% !important;">
-    <div id="main-page" >
-      <div class="item active"><!-- class of active since it's the first item -->
-        <img src="http://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Skyline_Panorama_Dusk.jpg" alt="" />
+  <div class="jumbo dramatic"><!-- class of active since it's the first item -->
+    <h1 class="sogood">Be so loud they can't ignore you.</h1>
+    <div class="row-fluid">
+      <div class="span3 offset3">
+        
+          <button class="btn btn-large btn-primary impact">Make an Impact</button>
+
+      </div>
+
+      <div class="span3" style="margin-left:0px;">
+        <form class="form-search" style="width:100%;">
+          <div style="padding-top:6px;width:100%;" class="input-append">
+            <input type="text" style="width:auto;" name="city" autocomplete="off" maxlength="25" class="span2 search-query" placeholder="Search for a city" id="typeahead" data-provide="typeahead" data-items="6" data-source='[{% for city in cities %}"{{ city.name }}", {% endfor %} "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]'>
+            <button type="submit" style="width:auto;" class="btn">Search</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+
+
+
+
 <div class="container">
     
-     
+  <div class="facts">
+    <div class="row-fluid">
+      <div class="col span2 offset1">
+        Fact:
+      </div>
+      <div class="fact span7">
+        <span id="passion">
+          The <span class="mtg">town hall meeting</span> has been an important driver of community involvement for decades.  Local governments and a small group of citizens have met to share ideas and voice concerns on millions of occasions throughout America's history.
+          <!--The world needs people with incredible passion and commitment to keep the gears turning.  Passion is hard to come by these days.</span>  The work required of a person with the desire to change their community for the better is unacceptably huge.  The infrastrusture for <span id="solving">solving local challenges</span> or <span id="building">building something great</span> simply hasn't kept up with technology and the change it has wrought on the pace of life for an average Joe.  Incredibly, the <span id="townhallmtg">town hall meeting</span> is the primary (and often only) means for a person with a good idea to get it into the hands of the people  way of presenting ideas to a local government, getting an idea on the road to fruition, getting the ball rolling after someone has an idea to improve their community.-->
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="col span2 offset1">
+        Fact:
+      </div>
+      <div class="fact span7">
+        Ain't nobody got time for town hall meetings.
+      </div>
+    </div>
+  </div>
         
   <br>
   <br>
     <!-- Get the city Source -->
-  <a href="/register/" class="btn btn-primary btn-large">Get Started<br></a>
+  <center><a href="/register/" class="btn btn-primary btn-large">Get Started<br></a></center>
      
   <br>
   <br>
@@ -110,7 +204,7 @@
       </strong></span>
     </div>
     <div class="span5 offset0">
-      <img class="img-circle" src="{% static 'img/raphael_school_of_athens.jpg' %}" alt="Construction Workers" width="100%" height="100%" style="margin-top:30px;display: block; padding-left:25px;margin-left:auto; margin-right:auto;"/>
+      <img class="img-circle" src="{% static 'img/raphael_school_of_athens.jpg' %}" alt="Construction Workers" width="100%" height="100%" style="margin-top: 0px;display: block; padding-left:25px;margin-left:auto; margin-right:auto;"/>
     </div>
   </div>
 
@@ -146,7 +240,10 @@
 </div> <!-- /container -->
 
 
-  <script>$(function() {
+  <script>
+  $(function() {
+  $('.welcome').fadeIn('slow');
+
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {

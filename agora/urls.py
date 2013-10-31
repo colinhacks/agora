@@ -28,7 +28,7 @@ urlpatterns = patterns('',
 
     url(r'^city/$', 'agora.views.city', {'template':'posts_for_town.html'}),
     url(r'^city/(?P<pk>[0-9]+)$', 'agora.views.allposts', {'template':'real_posts_for_town.html'}),
-    url(r'^register/$', 'userapp.views.register', {}),
+    url(r'^register/$', 'userapp.views.register', {'template':'create.html'}),
 
 
 )

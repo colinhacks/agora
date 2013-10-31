@@ -10,7 +10,8 @@ from cityapp.models import City
 
 
 def home(request, *args, **kwargs):
-	return render(request, kwargs['template'],{'extension':'template.html'})
+	cities=City.objects.all()
+	return render(request, kwargs['template'],{'cities':cities,'extension':'template.html'})
 
 def thread(request, *args, **kwargs):
 	post = Post.objects.get(pk=kwargs['pk'])
